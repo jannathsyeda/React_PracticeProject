@@ -35,7 +35,7 @@ function App() {
         <div>
         <h1>hi, My name is {name}</h1>
         <p>my id is {10+20}</p>
-     
+     <h1>ul start for ul li all list of product and nameArray</h1>
         <ul>
             {
           nameArrays.map(nameArray=><li>{nameArray}</li>)
@@ -44,15 +44,17 @@ function App() {
             {
               collectionProducts.map(collectionProduct=><li>{collectionProduct.name}</li>)
             }
-            
+            {
+              collectionProducts.map(cProduct=><Product collectionProduct={cProduct}></Product>)
+            }
         </ul>
         </div>
         <h1>another for object variable</h1>
         <h4 style={{backgroundColor:'tomato', color:'black', }}>ID:{person.id},  name: {person.name}</h4>
 
         <h1>for product component (name and price)</h1>
-        <Product productName={collectionProducts[0].name} price={collectionProducts[0].price}></Product>
-
+        <Product collectionProduct={collectionProducts[0]}></Product>
+        <Product collectionProduct={collectionProducts[1]}></Product>
 
          <h1>for person component (name and price)</h1> 
           <Person proffession="Developer" paragraph="good to hear that.."></Person>
@@ -116,11 +118,15 @@ function Product(props){
     float:"left",
     marginTop:"50px"
   }
+
+ 
+
+  const {name,price}=props.collectionProduct;
   return(
     <div style={productStyle}>
       <h6>props exp</h6>
-      <h1>ProductName: {props.productName}</h1>
-      <p>price:{props.price}</p>
+      <h1>ProductName:{name}</h1>
+      <p>price:{price}</p>
     </div>
   )
 }
