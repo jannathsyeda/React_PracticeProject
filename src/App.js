@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
+
   var name="fahima";
   var person={
     name:"jannath",
@@ -12,31 +13,49 @@ function App() {
 
   }
 
-  const collectionPro=[
+  const collectionProducts=[
     {name:"jsTools", price:"$50" },
     {name:"PHPTools", price:"$50" },
     {name:"cssTools", price:"$50" }
   ]
+
+
+ const nameArrays=["jannath","fahima","rita","mita","tina"]
+
+
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
+
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
-        
+
+        <div>
         <h1>hi, My name is {name}</h1>
         <p>my id is {10+20}</p>
+     
+        <ul>
+            {
+          nameArrays.map(nameArray=><li>{nameArray}</li>)
 
-        <p>another for object variable</p>
-        <h style={{backgroundColor:'tomato', color:'black', }}>ID:{person.id},  name: {person.name}</h>
+            }
+            {
+              collectionProducts.map(collectionProduct=><li>{collectionProduct.name}</li>)
+            }
+            
+        </ul>
+        </div>
+        <h1>another for object variable</h1>
+        <h4 style={{backgroundColor:'tomato', color:'black', }}>ID:{person.id},  name: {person.name}</h4>
 
-  
-<Product productName={collectionPro[0].name} price={collectionPro[0].price}>
+        <h1>for product component (name and price)</h1>
+        <Product productName={collectionProducts[0].name} price={collectionProducts[0].price}></Product>
 
-</Product>
 
-        <Person proffession="Developer" paragraph="good to hear that.."></Person>
+         <h1>for person component (name and price)</h1> 
+          <Person proffession="Developer" paragraph="good to hear that.."></Person>
         <Person proffession="Teacher" paragraph="good to hear that..Novel prof."></Person>
         <Person proffession="Banker"></Person>
         <a
@@ -47,22 +66,27 @@ function App() {
         >
           Learn React
         </a>
+
+
+
+
       </header>
 
  
     </div>
   );
 }
+// person component
 
 function Person(props){
 
-  var person2={
-    name:"jannath",
-    id:"33",
-    section:"A",
-    proffession:"developer"
+  // var person2={
+  //   name:"jannath",
+  //   id:"33",
+  //   section:"A",
+  //   proffession:"developer"
 
-  }
+  // }
 
 const  personStyle={
   border:"1px solid red",
@@ -80,6 +104,7 @@ const  personStyle={
   );
 }
 
+// product component
 
 function Product(props){
   const productStyle={
