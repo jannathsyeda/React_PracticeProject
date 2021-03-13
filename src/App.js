@@ -1,5 +1,5 @@
-
-import logo from './logo.svg';
+import React,{useState} from 'react';
+import logo from './logo.svg' ;
 import './App.css';
 
 function App() {
@@ -31,7 +31,7 @@ function App() {
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
-
+<Counter></Counter>
         <div>
         <h1>hi, My name is {name}</h1>
         <p>my id is {10+20}</p>
@@ -44,10 +44,13 @@ function App() {
             {
               collectionProducts.map(collectionProduct=><li>{collectionProduct.name}</li>)
             }
-            {
-              collectionProducts.map(cProduct=><Product collectionProduct={cProduct}></Product>)
-            }
+            
         </ul>
+        {
+              collectionProducts.map(cProduct=><Product collectionProduct={cProduct}></Product>)
+        }
+
+     
         </div>
         <h1>another for object variable</h1>
         <h4 style={{backgroundColor:'tomato', color:'black', }}>ID:{person.id},  name: {person.name}</h4>
@@ -131,6 +134,20 @@ function Product(props){
   )
 }
 
+function Counter()
+{
+  const [count, setCount]= useState(10);
+  // const handleIncrease = () => setCount(count + 1);(if use this function in onclick)
+  return(
+    <div>
+      <h1>Count: {count}</h1>
+      <button onMouseMove={()=> setCount(count+1)}>increase</button>
+      <button onClick={()=> setCount(count-1)}>decrease</button>
+
+    </div>
+  )
+}
+            
 
 
 

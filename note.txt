@@ -1,0 +1,20 @@
+1)d3chart ,dashboard charts(d3js.org site).svg dia chart banay
+3)nvd3 another chart
+4)chartjs(free code chart)
+5)react install command
+npx create-react-app my-app
+cd my-app
+npm start
+
+6)emit setting site search .. (jodi htnl suggestion na ashey)
+video 32-4(for settings)
+
+
+7)JSX stands for JavaScript XML. ... JSX makes it easier to write and add HTML in React.
+8)state use korley upore 
+
+import React,{ userState} from 'react';
+ 
+import kortey hoy
+
+9)react eventListenerList search for react event
