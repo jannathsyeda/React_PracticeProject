@@ -18,3 +18,28 @@ import React,{ userState} from 'react';
 import kortey hoy
 
 9)react eventListenerList search for react event
+*****10)react kivhabe kaj kore.. vvimp q:
+******11)what is react
+ans:react.org v-33.4 v-33.3
+****keno react choice- angular complex, specific kore dewa kunta kivhabe use hobe,
+react light weight ,,easily conpect buje easiley shika jay,core conpect ja onno tay easily use koa jay
+vue vs react vas angular
+
+
+10)react use one-way data binding
+11)useState() ke huck boley or altra  bola hoy
+
+12)const [count, setCount] =useState(0)
+ useState er convention
+
+13)react kivhabe kaj kore? vvimp q:
+re-rendering
+vertual dom dia process kore
+fiber engine
+reconciliation
+
+1st rerender korbe,virtual dom takbey(internal structure),fiber engine diif alorithom kore difference make kore ki ki change ta jane  tarpor etake reconciliation kora. ei vhabei react kaj kore 
+
+er moddey virtual ekta dom takey she compair kore ki ki change hoise,parton oi change onushatey takey update kore dey
+14)key warning du rkorar jonno.cz ekta duita list update krar jonno full item react ke check kortey hoy ,,time consumin g er jonno key dewa hoy a slike key={element.id}
+15)api data load er jonno useEffect function er vetor fetch kortey hoy,and [] dewa hoy useEffect ekbar call er jonnno
