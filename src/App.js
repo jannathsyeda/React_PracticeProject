@@ -155,7 +155,7 @@ function Users(){
 
  
   useEffect(()=>{
-    fetch('https://jsonplaceholder.typicode.com/users')
+    fetch('https://restcountries.eu/rest/v2/all')
     .then(res =>res.json())
     .then(data=>setUsers(data));
   },[])

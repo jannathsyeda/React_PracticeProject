@@ -43,3 +43,50 @@ reconciliation
 er moddey virtual ekta dom takey she compair kore ki ki change hoise,parton oi change onushatey takey update kore dey
 14)key warning du rkorar jonno.cz ekta duita list update krar jonno full item react ke check kortey hoy ,,time consumin g er jonno key dewa hoy a slike key={element.id}
 15)api data load er jonno useEffect function er vetor fetch kortey hoy,and [] dewa hoy useEffect ekbar call er jonnno
+
+
+16)react extensions--- for vscode
+a) react extension pack
+b)auto import
+c)file->prefferanc->settings->emmet extension settings->edit setting in json
+then past 
+
+"emmet.includeLanguages": {
+    "javascript": "javascriptreact",
+    
+}
+
+*fontawsome-react
+go frontawsome->react->copy import code->run commend
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import React from 'react';
+import  './Product.css';
+import { faShoppingCart} from '@fortawesome/free-solid-svg-icons'
+
+
+const Product = (props) => {
+    console.log(props.product.name);
+    const{img,name, seller, price,stock}=props.product;
+    return (
+        <div class="product">
+        <div>
+            <img src={img} alt=""/>
+        </div>
+        <div class="Product-details">
+           
+            <h4 class="product-name">{name}</h4>
+            <br/>
+            <p><small>by: {seller}</small></p>
+            <p>${price}</p>
+            <br/>
+            <p><small>Only {stock} left in stock-Order soon</small></p>
+        <button onClick={()=>props.handleAddProduct(props.product)} class="main-button"><FontAwesomeIcon icon={faShoppingCart}/> add to cart</button>
+        </div>
+        </div>
+    );
+};
+
+export default Product;
+
+* react bootstrap
